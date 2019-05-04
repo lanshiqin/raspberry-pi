@@ -22,6 +22,10 @@ func main() {
 	http.Handle("/css/", http.FileServer(http.Dir("template")))
 	http.Handle("/js/", http.FileServer(http.Dir("template")))
 
+	log.Println("Raspberry Pi Service Startup at http://localhost:9999")
 	http.HandleFunc("/", indexHandler)
-	_ = http.ListenAndServe(":9999", nil)
+	err := http.ListenAndServe(":9999", nil)
+	if err != nil {
+		log.Println("Raspberry Pi Service Startup Failure")
+	}
 }
