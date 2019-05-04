@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Raspberry PI</title>
+</head>
+<body>
+<h2>Raspberry PI</h2>
+<hr>
+系统信息：
+<table border="1">
+    <th>系统类型</th>
+    <th>系统架构</th>
+    <th>CPU核心数</th>
+    <th>主机名称</th>
+    <tr>
+        <td>{{.OS}}</td>
+        <td>{{.ARCH}}</td>
+        <td>{{.NumCPU}}</td>
+        <td>{{.HostName}}</td>
+    </tr>
+</table>
+</body>
+</html>
